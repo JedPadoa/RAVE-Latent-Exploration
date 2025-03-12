@@ -269,3 +269,13 @@ class LatentController:
         """Set the model to use for audio generation"""
         self.model = model
         logger.info("Model updated for audio generation")
+        
+        
+if __name__ == '__main__':
+    # Test the LatentController class
+    model = torch.jit.load('musicnet.ts')
+    controller = LatentController(latent_dims=8)
+    with torch.no_grad():
+        audio = model.decode(controller.get_vector())
+        audio = audio.squeeze().cpu().numpy()
+    print(audio.shape)

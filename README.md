@@ -1,4 +1,6 @@
-A user interface to listen to a rave prior and alter latent dimensions in real time
+A user interface to listen to a rave prior and alter latent dimensions in real time.
+
+RAVE is a VAE (variational auto encoder) capable of generating high quality synthesized audio in real time. A prior is a learned statistical distribution from which allows for high quality autoregressive synthesis of coherent sounds similar to those of the training data.
 
 To run: 
 
